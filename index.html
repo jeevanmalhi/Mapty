@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image/png" href="/src/img/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <link rel="stylesheet" href="/src/style.css" />
+
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   <script defer type="module" src="/src/main.js"></script>
+
+    <title>MapIt - track your workouts</title>
+  </head>
+  <body>
+    <div class="workout__modal hidden">
+        <form class="form">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label">Distance</label>
+            <input class="form__input form__input--distance" placeholder="km" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Duration</label>
+            <input class="form__input form__input--duration" placeholder="min" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Cadence</label>
+            <input
+              class="form__input form__input--cadence"
+              placeholder="step/min"
+            />
+          </div>
+          <div class="form__row form__row--hidden">
+            <label class="form__label">Elev Gain</label>
+            <input
+              class="form__input form__input--elevation"
+              placeholder="meters"
+            />
+          </div>
+          <button class="form__btn form__btn--success">OK</button>
+          <button class="form__btn form__btn--exit">CANCEL</button>
+        </form>
+      </div>
+    <div class="overlay hidden"></div>
+      <div class="sidebar">
+        <div class="sidebar__header">
+            <img src="/src/img/icon.png" alt="Logo" class="logo" /> &nbsp; &nbsp;
+            <h1 class="title">Mapty</h1>
+        </div>
+        <div class="workouts__header">
+            <div class="workouts__header--sort">
+                <label class="workout__sort--label">Sort by: </label>
+                <select class="workout__sort--options">
+                  <option value="id">Default</option>
+                  <option value="distance">Distance</option>
+                  <option value="duration">Duration</option>
+                  <option value="type">Type</option>
+                </select>
+              </div>
+              <div class="workout__header--btns">
+                <div class="header__btn header__btn--reset"><i class="fa fa-refresh"></i></div>
+                <div class="header__btn header__btn--delete"><i class="fa fa-trash"></i></div>
+              </div>
+        </div>
+        <ul class="workouts">
+        </ul>
+
+        <p class="copyright">
+          &copy; Design by
+          <a
+            class="twitter-link"
+            target="_blank"
+            href="https://twitter.com/jonasschmedtman"
+            >Jonas Schmedtmann</a
+          >. Developed by <a
+          class="twitter-link"
+          target="_blank"
+          href="https://github.com/jeevanmalhi"
+          >Jeevan Malhi</a
+        >.<br/>
+        Use for learning or your portfolio. Don't use to teach. Don't claim
+          as your own.
+        </p>
+      </div>
+      </div>
+      <div id="map"></div>
+  </body>
+</html>

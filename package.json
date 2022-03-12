@@ -1,0 +1,12 @@
+{
+  "name": "MapIt",
+  "version": "1",
+  "description": "Map your Workout",
+  "main": "index.js",
+  "author": "Jeevan Malhi",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  }
+}

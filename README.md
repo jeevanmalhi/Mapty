@@ -1,6 +1,7 @@
 # Mapty
 
 Better track your workouts by pinning them to map while recording your stats. Mapty lets you add, edit and remove workouts while giving you the option to pick between different types of workouts. Your progress is never lost, start where you left off anytime.
+[live app](https://mapty-jm.herokuapp.com/)
 
 [https://user-images.githubusercontent.com/6546427/158037613-0cdbf49e-5f11-4480-92e8-d138b7bdcd0f.mp4](https://user-images.githubusercontent.com/6546427/158037613-0cdbf49e-5f11-4480-92e8-d138b7bdcd0f.mp4)
 

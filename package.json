@@ -2,11 +2,15 @@
   "name": "MapIt",
   "version": "1",
   "description": "Map your Workout",
-  "main": "index.js",
+  "default": "index.html",
   "author": "Jeevan Malhi",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
   "dependencies": {
-    "leaflet": "^1.7.1"
+    "leaflet": "^1.7.1",
+    "parcel": "^2.3.2"
   }
 }
